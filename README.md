@@ -3,6 +3,7 @@
 ### Status: Development
 
 Antra is a Ruby-Application to analyse money-transactions on your local machine.
+I'm working on a [german descripton](https://docs.google.com/document/d/1v4QiiwAG0i9QDVIku-Dx6vyoL8zJ_ijZrKlbnLBlwrU/edit?usp=sharing) for this application.
 
 ## Installation
 
