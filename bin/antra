@@ -1,2 +1,6 @@
 #!/bin/env ruby
 
+require "antra"
+
+Antra::WebApp.run!
+
