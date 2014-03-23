@@ -1,13 +1,19 @@
 require "antra/version"
 require "antra/paths"
-require "sinatra"
+require "antra/webapp"
 
 module Antra
-  class WebApp < Sinatra::Base
-    set :views, Path.gem_path('views')
+  def self.startup(port=8080, environment=:production)
+    Antra::WebApp.environment = environment
 
-    get "/" do
-      erb :index
-    end
+    Antra::WebApp.bind = "localhost"
+    Antra::WebApp.port = port
+
+    puts
+    puts "Antra is running on #{ Antra::WebApp.bind }:#{ Antra::WebApp.port } in #{ Antra::WebApp.environment }-mode"
+    puts
+    puts
+
+    Antra::WebApp.run!
   end
 end
